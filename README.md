@@ -21,5 +21,25 @@ void loop() {
 }
 ```
 
+Change the blink time by adjusting the delay function 
+```C++
+
+int delayTime = 5 * 1000; // 5 seconds
+
+void loop() {
+    digitalWrite(ledPin, HIGH); 
+    delay(delayTime); 
+    digitalWrite(ledPin, LOW);
+    delay(delayTime);
+}
+```
+
+If you want to control the brightness of the LED, you can make use of the `analogWrite()` funtion rather than the `digitalWrite()`. It takes any values between 0 (lowest brightness) to 255 (highest brightness).
+
+```C++
+analogWrite(ledPin, value); // the valus can be anywhere from 0 to 255
+```
+
+
 #### Schematic
 ![image](https://github.com/Ryan-Perera/Arduino/assets/104118917/c098ff53-ba29-40ce-838d-ffd7dac1b747)
